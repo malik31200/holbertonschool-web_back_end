@@ -5,7 +5,7 @@ and return their sum
 """
 
 
-def add(a: float, b: float):
+def add(a: float, b: float) -> float:
     """
     Return the sum of a and b as float.
     """
