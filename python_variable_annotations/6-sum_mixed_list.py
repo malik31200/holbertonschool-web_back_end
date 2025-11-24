@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-module that contains a function which takes a list
+Module that contains a function which takes a list
 of integers and floats and returns their sum as a float.
 """
 from typing import Union, List
