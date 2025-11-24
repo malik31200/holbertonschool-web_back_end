@@ -2,7 +2,7 @@
 """
 The module contains a function that takes
 two strings as arguments and
-return a concatenated string 
+return a concataned string
 """
 
 
