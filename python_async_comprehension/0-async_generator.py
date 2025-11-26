@@ -5,10 +5,10 @@ The coroutine will loop 10 times, each time asynchronously wait 1 second.
 """
 import random
 import asyncio
-from typing import AsyncGenerator
+from typing import Generator, List
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> Generator[float, None, None]:
     """
     Yields a random number between 0 and 10 for 10 times.
     """
