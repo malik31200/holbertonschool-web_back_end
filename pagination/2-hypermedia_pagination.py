@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """
+Pagination helper module.
 """
 from typing import Dict, List, Any, Tuple
 import csv
