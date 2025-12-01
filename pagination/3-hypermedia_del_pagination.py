@@ -39,13 +39,13 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict[str, Any]:
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
         """
         Returns a pagination dictionary resilient to deletions.
         """
         indexed_dataset = self.indexed_dataset()
 
-        assert index is not None and index in indexed_dataset
+        assert index is not None and 0 <= index < len(indexed_dataset)
 
         data: List[List[str]] = []
         current_index = index
