@@ -45,7 +45,7 @@ class Server:
         """
         indexed_dataset = self.indexed_dataset()
 
-        assert index is not None and 0 <= index < len(indexed_dataset)
+        assert index is not None and index in indexed_dataset
 
         data: List[List[str]] = []
         current_index = index
