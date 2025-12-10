@@ -38,7 +38,7 @@
 - Set a solid foundation for project execution
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 2. Team Formation & Roles
 
 | ![Christophe](images/christophe.jpg){width=60px} | **Christophe BARRERE**<br>Primary Role: Project Manager & Lead Back-End Developer<br>Skills: Back-end architecture, database management, business logic, project coordination<br>Strengths: Global project vision, structured workflow, strong back-end expertise |
@@ -87,7 +87,7 @@
 - Mandatory documentation of code
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 4. Stakeholder Analysis
 ### Internal Stakeholders
 1. **Development Team:** Designs, builds, tests, and maintains the application
@@ -102,7 +102,7 @@
 6. **Holberton / SWE / Mentors:** Provide guidance, review technical quality, evaluate project
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 5. Brainstorming & Idea Exploration
 ## 5.1 Research Phase
 Team research included:
@@ -139,7 +139,7 @@ Team research included:
 - How might we enhance employee experience?
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 6. Project Idea Evaluation
 ## 6.1 Evaluation Criteria
 - Technical feasibility
@@ -149,7 +149,7 @@ Team research included:
 - Scalability
 - Complexity
 - Value added to company
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 ## 6.2 Ideas Explored
 - **🟢 Idea 1 – Sports Class Management App (Actual):** Schedule, register, pay, session pass & history, admin panel
 - **🟡 Idea 2 – Amateur Football Social Network (Occitanie):** Calendar, results, media sharing, likes/comments/follow
@@ -163,7 +163,7 @@ Team research included:
 | Pottery Classes | ⭐⭐⭐⭐⭐ | ⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | 🥉 3 |
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 7. Final MVP Selection & Refinement
 ## 7.1 Problem Statement
 Current challenges:
@@ -183,7 +183,7 @@ Current challenges:
 **Main Goal:** Centralize and automate sports class management to improve organization and UX
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 8. Target Audience
 - **Primary Users:** Actual employees
 - **Secondary Users:** Gym administrators, sports coach
@@ -195,7 +195,7 @@ Current challenges:
 - User roles: Admin, Employee
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 10. Why This MVP Was Selected
 - Solves a real, concrete problem
 - High value for company
@@ -206,7 +206,7 @@ Current challenges:
 Other ideas rejected due to higher risk, less relevance, or complexity
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 11. Key Features & SMART Objectives
 **Key MVP Features:**
 - Class booking system
@@ -219,7 +219,7 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 - S3: Admin can create a class in under 1 minute
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 12. Project Scope
 **✔ In Scope:**
 - Web app, user authentication, class creation & management, registration, payment, session pass, reservation history, user management
@@ -228,7 +228,7 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 - Native mobile app, advanced analytics, AI coaching, performance tracking, SMS notifications
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 13. Risks & Mitigation Strategies
 | Risk | Mitigation |
 |------|-----------|
@@ -237,7 +237,7 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 | High workload | Clear task distribution, weekly follow-up |
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # 14. Final Outcome
 - Clearly defined MVP
 - Well-established scope
@@ -245,7 +245,7 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 - Solid foundation for Stage 2
 
 ---
-
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 # Stage 2: Project Planning
 ## 1. High-Level Timeline
 **Major stages:**
@@ -268,3 +268,5 @@ gantt
     Stage 3 – Technical Documentation :         s3, 2025-12-22, 21d
     Stage 4 – MVP Development         :         s4, 2026-01-12, 56d
     Stage 5 – Project Closure         :         s5, 2026-03-09, 7d
+
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
