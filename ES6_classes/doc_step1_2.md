@@ -245,7 +245,7 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 - Solid foundation for Stage 2
 
 ---
-[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
+
 # Stage 2: Project Planning
 ## 1. High-Level Timeline
 **Major stages:**
@@ -254,6 +254,8 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 - **Stage 3:** Technical Documentation
 - **Stage 4:** MVP Development
 - **Stage 5:** Project Closure
+
+[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
 
 ### Gantt Chart Timeline
 ```mermaid
@@ -268,5 +270,3 @@ gantt
     Stage 3 – Technical Documentation :         s3, 2025-12-22, 21d
     Stage 4 – MVP Development         :         s4, 2026-01-12, 56d
     Stage 5 – Project Closure         :         s5, 2026-03-09, 7d
-
-[🔝 Back to top](#stage-1-report--team-formation--mvp-definition)
