@@ -247,7 +247,7 @@ Other ideas rejected due to higher risk, less relevance, or complexity
 ---
 
 # Stage 2: Project Planning
-## 1. High-Level Timeline (Mandatory)
+## 1. High-Level Timeline
 **Major stages:**
 - **Stage 1:** Idea Development — Completed
 - **Stage 2:** Project Planning — Current stage
