@@ -4,30 +4,29 @@ const countStudents = require('./3-read_file_async');
 const database = process.argv[2];
 
 const app = http.createServer((req, res) => {
-  res.setHeader('Content-Type', 'text/plain');
+  const { url } = req;
+
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
 
   // Route /
-  if (req.url === '/') {
-    res.statusCode = 200;
+  if (url === '/') {
     res.end('Hello Holberton School!');
-  } else if (req.url === '/students') {
-    res.statusCode = 200;
-    res.write('This is the list of our students\n');
-
+  } else if (url === '/students') {
     countStudents(database)
-      .then(() => {
-        res.end();
+      .then((data) => {
+        res.end(`This is the list of our students\n${data}`);
       })
-      .catch(() => {
-        res.write('Cannot load the database\n');
-        res.end();
+      .catch((err) => {
+        res.end(`This is the list of our students\n${err.message}`);
       });
   } else {
     res.statusCode = 404;
-    res.end();
+    res.end('Not Found');
   }
 });
 
-app.listen(1245);
+app.listen(1245, 'localhost', () => {
+  console.log('Server running at http://localhost:1245/');
+});
 
 module.exports = app;
