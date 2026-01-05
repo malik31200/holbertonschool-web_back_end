@@ -22,9 +22,9 @@ function countStudents(path) {
     fields[field].push(firstname); // add the firstname at this field
   });
 
-  for (const field in fields) {
+   Object.keys(fields).forEach((field) =>    {
     console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
-  }
+  });
 }
 
 module.exports = countStudents;
