@@ -1,6 +1,5 @@
-console.log('Welcome to Holberton School, what is your name?');
-process.stdin.resume('data', (input) => {
-  // resume allows the program to wait for entry
+process.stdout.write('Welcome to Holberton School, what is your name?\n');
+process.stdin.on('data', (input) => {
   // process.stdin to read the user input
   const name = input.toString().trim();
   // input is a buffer, convert it to a string and remove the line break.
