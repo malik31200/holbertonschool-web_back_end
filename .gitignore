@@ -1,0 +1,23 @@
+# Node
+node_modules/
+package-lock.json
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# OS / Windows
+*:Zone.Identifier
+
+# Ignore Holberton test files
+*-main.js
+*-main.py
+*-main_0.js
+*-main_1.js
+
+# Ignore Mongo dumps
+dump/
+*.zip
+
