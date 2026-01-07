@@ -6,6 +6,8 @@ function countStudents(path) {
       const lines = data.split('\n').filter((line) => line.trim() !== '');
       const students = lines.slice(1);
 
+      let output = `Number of students: ${students.length}\n`;
+
       console.log(`Number of students: ${students.length}`);
 
       const fields = {};
@@ -16,8 +18,10 @@ function countStudents(path) {
       });
 
       Object.keys(fields).forEach((field) => {
-        console.log(`Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}`);
+        output += `Number of students in ${field}: ${fields[field].length}. List: ${fields[field].join(', ')}\n`;
       });
+
+      return output.trim();
     })
     .catch(() => {
       throw new Error('Cannot load the database');
