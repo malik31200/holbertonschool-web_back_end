@@ -6,6 +6,7 @@ from base_caching import BaseCaching
 
 
 class LIFOCache(BaseCaching):
+    """LIFO caching system"""
     def __init__(self):
         """Initialize"""
         super().__init__()
@@ -22,8 +23,7 @@ class LIFOCache(BaseCaching):
             del self.cache_data[self.last_key]
 
         self.last_key = key
-            
-
+     
     def get(self, key):
         """Return value linked to key"""
         if key is None:
