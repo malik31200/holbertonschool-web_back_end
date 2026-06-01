@@ -8,7 +8,7 @@ from base_caching import BaseCaching
 class FIFOCache(BaseCaching):
     """FIFO caching system"""
     def __init__(self):
-        """"""
+        """ initialize"""
         super().__init__()
         self.order = []
 
