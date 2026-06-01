@@ -15,14 +15,14 @@ class LIFOCache(BaseCaching):
         """Add item to cache using LIFO rule"""
         if key is None or item is None:
             return
-
-        prev_last = self.last_key
         self.cache_data[key] = item
-        self.last_key = key
 
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
-            del self.cache_data[prev_last]
-            print(f"DISCARD: {prev_last}")
+            print(f"DISCARD: {self.last_key}")
+            del self.cache_data[self.last_key]
+
+        self.last_key = key
+            
 
     def get(self, key):
         """Return value linked to key"""
