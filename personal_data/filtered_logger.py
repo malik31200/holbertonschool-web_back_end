@@ -7,6 +7,9 @@ import logging
 from typing import List
 
 
+PII_FIELDS = ("name", "email", "phone", "ssn", "password")
+
+
 class RedactingFormatter(logging.Formatter):
     """
     Formatter that filters sensitive data from log messages.
@@ -53,3 +56,30 @@ def filter_datum(fields: List[str],
         remplacement = f"{field}={redaction}{separator}"
         message = re.sub(pattern, remplacement, message)
     return message
+
+
+def get_logger() -> logging.Logger:
+    """
+    Create and return a configured logger.
+    """
+    # Create a logger named "user_data"
+    logger = logging.getLogger("user_data")
+
+    # The logger only display INFO and more important messages
+    logger.setLevel(logging.INFO)
+
+    # Prevent messages from being sent to parent loggers
+    logger.propagate = False
+
+    # Hander display the logs in terminal
+    handler = logging.StreamHandler()
+
+    # Combines our formatter which hides sensitive data
+    handler.setFormatter(
+        RedactingFormatter(PII_FIELDS)
+    )
+
+    # Attach the handler to the Logger
+    logger.addHandler(handler)
+
+    return logger
