@@ -8,7 +8,7 @@ from typing import List
 
 
 class RedactingFormatter(logging.Formatter):
-    """ 
+    """
     Formatter that filters sensitive data from log messages.
     """
 
@@ -28,7 +28,9 @@ class RedactingFormatter(logging.Formatter):
          Format log record and redact sensitive fields.
         """
         original = super().format(record)
-        return filter_datum(self.fields, self.REDACTION, original, self.SEPARATOR)
+        return filter_datum(self.fields, self.REDACTION,
+                            original, self.SEPARATOR)
+
 
 def filter_datum(fields: List[str],
                  redaction: str,
