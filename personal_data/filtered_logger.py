@@ -100,3 +100,39 @@ def get_db() -> connection.MySQLConnection:
         host=os.getenv("PERSONAL_DATA_DB_HOST", "localhost"),
         database=os.getenv("PERSONAL_DATA_DB_NAME")
     )
+
+
+def main() -> None:
+    """
+    Retrieve user records from the database and log them
+    """
+    # Create the logger
+    logger = get_logger()
+
+    # Connexion to the database
+    db = get_db()
+
+    # Create a curor to axecute SQL query
+    cursor = db.cursor()
+
+    # Retrieve  all rows from the users tble
+    cursor.execute("SELECT * FROM users;")
+
+    # Get the column names from the query results
+    columns = [col[0] for col in cursor.description]
+
+    # Iterate through each row returned by the query
+    for row in cursor:
+        message = "; ".join(
+            f"{column}={value}"
+            for column, value in zip(columns, row)
+        ) + ";"
+
+        logger.info(message)
+
+    cursor.close()
+    db.close()
+
+
+if __name__ == "__main__":
+    main()
