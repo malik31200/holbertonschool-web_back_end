@@ -19,7 +19,7 @@ class BasicAuth(Auth):
             return None
 
         prefix = "Basic "
-        if not self.authorization_header.startswith(prefix):
+        if not authorization_header.startswith(prefix):
             return None
 
         base64_part = authorization_header[len(prefix):]
