@@ -1,0 +1,43 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Flask / environment
+instance/
+.webassets-cache
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# MyPy
+.mypy_cache/
+
+# VS Code
+.vscode/
+
+# SQLite / DB files (if any)
+*.db
+*.sqlite3
+
+# Zip files (Holberton downloads often messy)
+*.zip
+
+# Temporary files
+*.swp
+*~
