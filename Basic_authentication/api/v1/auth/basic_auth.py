@@ -11,6 +11,7 @@ class BasicAuth(Auth):
 
     def extract_base64_authorization_header(self,
                                             authorization_header: str) -> str:
+        """ return part of base64 of the authorization of header """
         if authorization_header is None:
             return None
 
