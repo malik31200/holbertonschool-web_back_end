@@ -23,7 +23,7 @@ class LIFOCache(BaseCaching):
             del self.cache_data[self.last_key]
 
         self.last_key = key
-     
+
     def get(self, key):
         """Return value linked to key"""
         if key is None:
