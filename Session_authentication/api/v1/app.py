@@ -65,18 +65,23 @@ def before_request():
     excluded_paths = [
         "/api/v1/status/",
         "/api/v1/unauthorized/",
-        "/api/v1/forbidden/"
+        "/api/v1/forbidden/",
+        "/api/v1/auth_session/login/"
     ]
 
     # If route is public -> allow request
     if not auth.require_auth(request.path, excluded_paths):
         return
 
+    # Retrieve auth header + cookie session
+    auth_header = auth.authorization_header(request)
+    session_cookie = auth.session_cookie(request)
+
     # If no Authorization header -> 401
-    if auth.authorization_header(request) is None:
+    if auth_header is None and session_cookie is None:
         abort(401)
 
-    # If user is not valid -> 403
+    # Retrieve user actual
     request.current_user = auth.current_user(request)
 
     if request.current_user is None:
