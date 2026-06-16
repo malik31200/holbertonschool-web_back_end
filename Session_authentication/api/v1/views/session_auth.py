@@ -41,7 +41,7 @@ def login():
            "error": "wrong password"
         }), 401
 
-    from api.v1.auth import auth
+    from api.v1.app import auth
 
     session_id = auth.create_session(user.id)
     response = jsonify(user.to_json())
