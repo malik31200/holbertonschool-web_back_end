@@ -1,3 +1,4 @@
+
 """DB module
 """
 from sqlalchemy import create_engine
@@ -39,7 +40,8 @@ class DB:
             hashed_password=hashed_password
         )
 
-        self._session.add(new_user)
-        self._session.commit()
+        session = self._session
+        session.add(new_user)
+        session.commit()
 
         return new_user
