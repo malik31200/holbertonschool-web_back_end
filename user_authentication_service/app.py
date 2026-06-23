@@ -12,7 +12,7 @@ def home():
     """
     Home route returning JSON message
     """
-    return jsonify({"message": "Bievenue"})
+    return jsonify({"message": "Bienvenue"})
 
 
 if __name__ == "__main__":
