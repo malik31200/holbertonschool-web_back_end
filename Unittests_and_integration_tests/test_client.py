@@ -12,6 +12,7 @@ from fixtures import (
     repos_payload,
     expected_repos,
     apache2_repos,
+    TEST_PAYLOAD,
 )
 
 
@@ -127,15 +128,24 @@ class TestGithubOrgClient(unittest.TestCase):
 
         self.assertEqual(result, expected)
 
-
-@parameterized_class(("org_payload", "repos_payload", "expected_repos", "apache2_repos"), [
+@parameterized_class(
     (
-        org_payload,
-        repos_payload,
-        expected_repos,
-        apache2_repos,
-    )
-])
+        "org_payload",
+        "repos_payload",
+        "expected_repos",
+        "apache2_repos",
+        "TEST_PAYLOAD",
+    ),
+    [
+        (
+            org_payload,
+            repos_payload,
+            expected_repos,
+            apache2_repos,
+            TEST_PAYLOAD,
+        )
+    ]
+)
 class TestIntegrationGithubOrgClient(unittest.TestCase):
     """
     Test for GithubOrgClient.public_repos
