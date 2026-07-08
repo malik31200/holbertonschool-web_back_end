@@ -5,6 +5,8 @@ Basic Flask app with Babel selection.
 
 from flask import Flask, render_template, request, g
 from flask_babel import Babel
+import pytz
+from pytz.exceptions import UnknownTimeZoneError
 
 
 class Config:
@@ -66,7 +68,35 @@ def get_locale():
     return locale or app.config["BABEL_DEFAULT_LOCALE"]
 
 
-babel.init_app(app, locale_selector=get_locale)
+def get_timezone():
+    """Get the best timezone"""
+
+    timezone = request.args.get("timezone")
+
+    if timezone:
+        try:
+            pytz.timezone(timezone)
+            return timezone
+        except UnknownTimeZoneError:
+            pass
+
+    if g.user:
+        user_timezone = g.user.get("timezone")
+
+        if user_timezone:
+            try:
+                pytz.timezone(user_timezone)
+                return user_timezone
+            except UnknownTimeZoneError:
+                pass
+
+    return app.config["BABEL_DEFAULT_TIMEZONE"]
+
+
+babel.init_app(
+    app, locale_selector=get_locale,
+    timezone_selector=get_timezone
+    )
 
 
 @app.route('/')
@@ -74,7 +104,7 @@ def index() -> str:
     """
     Display the home page
     """
-    return render_template("6-index.html")
+    return render_template("7-index.html")
 
 
 if __name__ == "__main__":
