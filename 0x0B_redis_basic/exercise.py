@@ -66,7 +66,7 @@ def replay(fn):
     ))
 
     for inp, out in zip(inputs, outputs):
-        print ("{}(*{}) -> {}".format(
+        print("{}(*{}) -> {}".format(
             fn.__qualname__,
             inp.decode(),
             out.decode()
