@@ -48,6 +48,31 @@ def call_history(method: Callable) -> Callable:
     return wrapper
 
 
+def replay(fn):
+    """
+    Displays the history of calls of a function
+    """
+    redis = fn.__self__._redis
+
+    inputs_key = "{}:inputs".format(fn.__qualname__)
+    outputs_key = "{}:outputs".format(fn.__qualname__)
+
+    inputs = redis.lrange(inputs_key, 0, -1)
+    outputs = redis.lrange(outputs_key, 0, -1)
+
+    print("{} was called {} times:".format(
+        fn.__qualname__,
+        len(inputs)
+    ))
+
+    for inp, out in zip(inputs, outputs):
+        print ("{}(*{}) -> {}".format(
+            fn.__qualname__,
+            inp.decode(),
+            out.decode()
+        ))
+
+
 class Cache():
     """
     CAche class
